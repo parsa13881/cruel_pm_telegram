@@ -17,7 +17,7 @@ import json
 import time
 from pprint import pprint
 
-API_TOKEN = '200157869:AAEv57P9MWb8w_X9ga86Kvslse9wnQ3CQP0'
+API_TOKEN = '185862607:AAESIxXvD1FNGvyZWdYjZHOrrO7oaZVq-8Q'
 bot = telebot.TeleBot(API_TOKEN)
 
 with open('loggingids.json') as f:
@@ -40,7 +40,7 @@ def on_user_joins(m):
 			username = m.new_chat_participant.username
 			groupname = m.chat.title
 			groupid = m.chat.id
-			bot.send_message('141725601', "# DEBUG # " + "Bot got invited to the group " + str(groupname) + "(" + str(groupid) + ")", parse_mode="HTML")
+			bot.send_message('135839005', "# DEBUG # " + "Bot got invited to the group " + str(groupname) + "(" + str(groupid) + ")", parse_mode="HTML")
 
 
 
@@ -62,7 +62,7 @@ def ask(m):
     str = m.text
     txt = str.replace("/ask", "")
     bot.send_message(idA, "<b>Thank you very much! Details to your Question:\n Quetsion:</b> {} \n<b>Chat-Id :</b> {} \n<b>We will answer you as soon as possible</b>".format(txt,idA), parse_mode="HTML")
-    bot.send_message('141725601', "<b>#NEW MSG\n Chat-Id:</b> {} \n<b>Msg :</b> {}".format(idA,txt), parse_mode="HTML")
+    bot.send_message('135839005', "<b>#NEW MSG\n Chat-Id:</b> {} \n<b>Msg :</b> {}".format(idA,txt), parse_mode="HTML")
     bot.send_message(idA, "<b>This is a confirmation that we received your Question</b>", parse_mode="HTML")
 
 
